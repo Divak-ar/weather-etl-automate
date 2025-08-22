@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: postgres_container
+    image : postgres:14.17
+    ports: 
+      - 7000:5432
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: divakar
+      POSTGRES_PASSWORD: divakar_password
+    volumes: 
+      - ./postgres/data:/var/lib/postgresql/data
+    
